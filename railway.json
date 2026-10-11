@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "services": [
+    {
+      "name": "uptime-kuma",
+      "source": {
+        "image": "louislam/uptime-kuma:1"
+      },
+      "config": {
+        "env": {
+          "PORT": "3001"
+        },
+        "rootDirectory": "/"
+      },
+      "volumes": [
+        {
+          "mountPath": "/app/data",
+          "name": "kuma-data"
+        }
+      ]
+    }
+  ]
+}
